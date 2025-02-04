@@ -171,7 +171,7 @@ function App() {
                         Contact Me
                       </a>
                       <a
-                        href="https://drive.google.com/file/d/1EFOjC3OIAmfkxXGEY7vCWEws_5lRDIT3/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1geYzjxoENcQnrJkRTdfYlzwKuj5-Olea/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-full transition-colors duration-300 flex items-center gap-2"
