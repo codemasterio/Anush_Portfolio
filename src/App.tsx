@@ -337,6 +337,11 @@ function App() {
                           src="/Anush.png" 
                           alt="Anush Naik" 
                           className="relative w-full h-auto rounded-2xl border-2 border-zinc-800/50 shadow-2xl"
+                          onError={(e) => {
+                            console.error('Error loading image:', e.currentTarget.src);
+                            // Fallback to a placeholder if the image fails to load
+                            e.currentTarget.src = 'https://via.placeholder.com/400x500?text=Anush+Naik';
+                          }}
                         />
                       </div>
                     </motion.div>
