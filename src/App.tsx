@@ -273,7 +273,7 @@ function App() {
                         Contact Me
                       </a>
                       <a
-                        href="https://drive.google.com/file/d/1geYzjxoENcQnrJkRTdfYlzwKuj5-Olea/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1Jksee_gfJa2KyXSkd0RXIY3WWxIXm00y/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-full transition-colors duration-300 flex items-center gap-2"
@@ -337,11 +337,6 @@ function App() {
                           src="/Anush.png" 
                           alt="Anush Naik" 
                           className="relative w-full h-auto rounded-2xl border-2 border-zinc-800/50 shadow-2xl"
-                          onError={(e) => {
-                            console.error('Error loading image:', e.currentTarget.src);
-                            // Fallback to a placeholder if the image fails to load
-                            e.currentTarget.src = 'https://via.placeholder.com/400x500?text=Anush+Naik';
-                          }}
                         />
                       </div>
                     </motion.div>
