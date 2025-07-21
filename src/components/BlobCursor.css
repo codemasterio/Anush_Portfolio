@@ -1,0 +1,90 @@
+.blob-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+}
+
+.blob-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  filter: url('#blob');
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: none;
+}
+
+.blob-layer {
+  position: absolute;
+  will-change: transform;
+  border-radius: 50%;
+  background: rgba(147, 197, 253, 0.8);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  pointer-events: none;
+  will-change: transform;
+  transition: background-color 0.15s ease-out;
+}
+
+.blob-layer-1 {
+  width: 48px;
+  height: 48px;
+  z-index: 3;
+  filter: drop-shadow(0 0 12px rgba(194, 91, 0, 0.6));
+}
+
+.blob-layer-2 {
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  opacity: 0.7;
+  filter: blur(6px);
+}
+
+.blob-layer-3 {
+  width: 160px;
+  height: 160px;
+  z-index: 1;
+  opacity: 0.4;
+  filter: blur(10px);
+}
+
+/* Hide cursor on elements that should have default cursor */
+a, button, input, textarea, select, [role="button"], [role="tab"] {
+  cursor: none !important;
+}
+
+/* Optional: Add hover effects */
+a:hover ~ .blob-cursor .blob-layer-1,
+button:hover ~ .blob-cursor .blob-layer-1 {
+  transform: scale(1.5);
+  background-color: rgba(99, 102, 241, 0.8) !important;
+}
+
+/* Hide cursor when not needed */
+@media (pointer: coarse) {
+  .blob-cursor {
+    display: none;
+  }
+}
